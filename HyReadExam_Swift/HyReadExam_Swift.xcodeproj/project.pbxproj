@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		285871FFA05C9FED9C69BD0F /* Pods_HyReadExam_Swift_HyReadExam_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4D005E47C238C2462B9208 /* Pods_HyReadExam_Swift_HyReadExam_SwiftUITests.framework */; };
+		6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */; };
+		6C593FEF29B20BA500A8DB9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */; };
+		6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FF029B20BA500A8DB9D /* UserListViewController.swift */; };
+		6C593FF429B20BA500A8DB9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C593FF229B20BA500A8DB9D /* Main.storyboard */; };
+		6C593FF629B20BA600A8DB9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C593FF529B20BA600A8DB9D /* Assets.xcassets */; };
+		6C593FF929B20BA600A8DB9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C593FF729B20BA600A8DB9D /* LaunchScreen.storyboard */; };
+		6C59400429B20BA600A8DB9D /* HyReadExam_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C59400329B20BA600A8DB9D /* HyReadExam_SwiftTests.swift */; };
+		6C59400E29B20BA600A8DB9D /* HyReadExam_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C59400D29B20BA600A8DB9D /* HyReadExam_SwiftUITests.swift */; };
+		6C59401029B20BA600A8DB9D /* HyReadExam_SwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C59400F29B20BA600A8DB9D /* HyReadExam_SwiftUITestsLaunchTests.swift */; };
+		BC74B885B816278141AF74D7 /* Pods_HyReadExam_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737D1D401C9140BBE50E9FAE /* Pods_HyReadExam_Swift.framework */; };
+		E3A03988A1340194901371FC /* Pods_HyReadExam_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E741DA4A9FD4532919652613 /* Pods_HyReadExam_SwiftTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C59400029B20BA600A8DB9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C593FE129B20BA500A8DB9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C593FE829B20BA500A8DB9D;
+			remoteInfo = HyReadExam_Swift;
+		};
+		6C59400A29B20BA600A8DB9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C593FE129B20BA500A8DB9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C593FE829B20BA500A8DB9D;
+			remoteInfo = HyReadExam_Swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0330AF565EE7C1821D8CDF92 /* Pods-HyReadExam_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam_Swift/Pods-HyReadExam_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		4B596E2E28823B537598CFA6 /* Pods-HyReadExam_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_SwiftTests.release.xcconfig"; path = "Target Support Files/Pods-HyReadExam_SwiftTests/Pods-HyReadExam_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		4FF03BFC7391AC663DF18FC4 /* Pods-HyReadExam_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam_SwiftTests/Pods-HyReadExam_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C593FE929B20BA500A8DB9D /* HyReadExam_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyReadExam_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6C593FF029B20BA500A8DB9D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		6C593FF329B20BA500A8DB9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C593FF529B20BA600A8DB9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C593FF829B20BA600A8DB9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C593FFA29B20BA600A8DB9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C593FFF29B20BA600A8DB9D /* HyReadExam_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyReadExam_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C59400329B20BA600A8DB9D /* HyReadExam_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExam_SwiftTests.swift; sourceTree = "<group>"; };
+		6C59400929B20BA600A8DB9D /* HyReadExam_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyReadExam_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C59400D29B20BA600A8DB9D /* HyReadExam_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExam_SwiftUITests.swift; sourceTree = "<group>"; };
+		6C59400F29B20BA600A8DB9D /* HyReadExam_SwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExam_SwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		737D1D401C9140BBE50E9FAE /* Pods_HyReadExam_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExam_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E136FADF22532E5214E039 /* Pods-HyReadExam_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_Swift.release.xcconfig"; path = "Target Support Files/Pods-HyReadExam_Swift/Pods-HyReadExam_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		9F420E8577E53CD904B67683 /* Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AD11B70BB41E1FE3035CB698 /* Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E741DA4A9FD4532919652613 /* Pods_HyReadExam_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExam_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4D005E47C238C2462B9208 /* Pods_HyReadExam_Swift_HyReadExam_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExam_Swift_HyReadExam_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C593FE629B20BA500A8DB9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC74B885B816278141AF74D7 /* Pods_HyReadExam_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C593FFC29B20BA600A8DB9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A03988A1340194901371FC /* Pods_HyReadExam_SwiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C59400629B20BA600A8DB9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285871FFA05C9FED9C69BD0F /* Pods_HyReadExam_Swift_HyReadExam_SwiftUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		276705968310EC5DACFA56C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				737D1D401C9140BBE50E9FAE /* Pods_HyReadExam_Swift.framework */,
+				EE4D005E47C238C2462B9208 /* Pods_HyReadExam_Swift_HyReadExam_SwiftUITests.framework */,
+				E741DA4A9FD4532919652613 /* Pods_HyReadExam_SwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C593FE029B20BA500A8DB9D = {
+			isa = PBXGroup;
+			children = (
+				6C593FEB29B20BA500A8DB9D /* HyReadExam_Swift */,
+				6C59400229B20BA600A8DB9D /* HyReadExam_SwiftTests */,
+				6C59400C29B20BA600A8DB9D /* HyReadExam_SwiftUITests */,
+				6C593FEA29B20BA500A8DB9D /* Products */,
+				88003582B8326630D558E051 /* Pods */,
+				276705968310EC5DACFA56C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6C593FEA29B20BA500A8DB9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C593FE929B20BA500A8DB9D /* HyReadExam_Swift.app */,
+				6C593FFF29B20BA600A8DB9D /* HyReadExam_SwiftTests.xctest */,
+				6C59400929B20BA600A8DB9D /* HyReadExam_SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C593FEB29B20BA500A8DB9D /* HyReadExam_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */,
+				6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */,
+				6C593FF029B20BA500A8DB9D /* UserListViewController.swift */,
+				6C593FF229B20BA500A8DB9D /* Main.storyboard */,
+				6C593FF529B20BA600A8DB9D /* Assets.xcassets */,
+				6C593FF729B20BA600A8DB9D /* LaunchScreen.storyboard */,
+				6C593FFA29B20BA600A8DB9D /* Info.plist */,
+			);
+			path = HyReadExam_Swift;
+			sourceTree = "<group>";
+		};
+		6C59400229B20BA600A8DB9D /* HyReadExam_SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C59400329B20BA600A8DB9D /* HyReadExam_SwiftTests.swift */,
+			);
+			path = HyReadExam_SwiftTests;
+			sourceTree = "<group>";
+		};
+		6C59400C29B20BA600A8DB9D /* HyReadExam_SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6C59400D29B20BA600A8DB9D /* HyReadExam_SwiftUITests.swift */,
+				6C59400F29B20BA600A8DB9D /* HyReadExam_SwiftUITestsLaunchTests.swift */,
+			);
+			path = HyReadExam_SwiftUITests;
+			sourceTree = "<group>";
+		};
+		88003582B8326630D558E051 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0330AF565EE7C1821D8CDF92 /* Pods-HyReadExam_Swift.debug.xcconfig */,
+				94E136FADF22532E5214E039 /* Pods-HyReadExam_Swift.release.xcconfig */,
+				AD11B70BB41E1FE3035CB698 /* Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.debug.xcconfig */,
+				9F420E8577E53CD904B67683 /* Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.release.xcconfig */,
+				4FF03BFC7391AC663DF18FC4 /* Pods-HyReadExam_SwiftTests.debug.xcconfig */,
+				4B596E2E28823B537598CFA6 /* Pods-HyReadExam_SwiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C593FE829B20BA500A8DB9D /* HyReadExam_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C59401329B20BA600A8DB9D /* Build configuration list for PBXNativeTarget "HyReadExam_Swift" */;
+			buildPhases = (
+				EC83EFAB52B76BB43330174D /* [CP] Check Pods Manifest.lock */,
+				6C593FE529B20BA500A8DB9D /* Sources */,
+				6C593FE629B20BA500A8DB9D /* Frameworks */,
+				6C593FE729B20BA500A8DB9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HyReadExam_Swift;
+			productName = HyReadExam_Swift;
+			productReference = 6C593FE929B20BA500A8DB9D /* HyReadExam_Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6C593FFE29B20BA600A8DB9D /* HyReadExam_SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C59401629B20BA600A8DB9D /* Build configuration list for PBXNativeTarget "HyReadExam_SwiftTests" */;
+			buildPhases = (
+				0CD54125A12814F182BEDC83 /* [CP] Check Pods Manifest.lock */,
+				6C593FFB29B20BA600A8DB9D /* Sources */,
+				6C593FFC29B20BA600A8DB9D /* Frameworks */,
+				6C593FFD29B20BA600A8DB9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C59400129B20BA600A8DB9D /* PBXTargetDependency */,
+			);
+			name = HyReadExam_SwiftTests;
+			productName = HyReadExam_SwiftTests;
+			productReference = 6C593FFF29B20BA600A8DB9D /* HyReadExam_SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6C59400829B20BA600A8DB9D /* HyReadExam_SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C59401929B20BA600A8DB9D /* Build configuration list for PBXNativeTarget "HyReadExam_SwiftUITests" */;
+			buildPhases = (
+				D2CDC2DA4E95086AD2EF57B6 /* [CP] Check Pods Manifest.lock */,
+				6C59400529B20BA600A8DB9D /* Sources */,
+				6C59400629B20BA600A8DB9D /* Frameworks */,
+				6C59400729B20BA600A8DB9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C59400B29B20BA600A8DB9D /* PBXTargetDependency */,
+			);
+			name = HyReadExam_SwiftUITests;
+			productName = HyReadExam_SwiftUITests;
+			productReference = 6C59400929B20BA600A8DB9D /* HyReadExam_SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C593FE129B20BA500A8DB9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					6C593FE829B20BA500A8DB9D = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					6C593FFE29B20BA600A8DB9D = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 6C593FE829B20BA500A8DB9D;
+					};
+					6C59400829B20BA600A8DB9D = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 6C593FE829B20BA500A8DB9D;
+					};
+				};
+			};
+			buildConfigurationList = 6C593FE429B20BA500A8DB9D /* Build configuration list for PBXProject "HyReadExam_Swift" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C593FE029B20BA500A8DB9D;
+			productRefGroup = 6C593FEA29B20BA500A8DB9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C593FE829B20BA500A8DB9D /* HyReadExam_Swift */,
+				6C593FFE29B20BA600A8DB9D /* HyReadExam_SwiftTests */,
+				6C59400829B20BA600A8DB9D /* HyReadExam_SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C593FE729B20BA500A8DB9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C593FF929B20BA600A8DB9D /* LaunchScreen.storyboard in Resources */,
+				6C593FF629B20BA600A8DB9D /* Assets.xcassets in Resources */,
+				6C593FF429B20BA500A8DB9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C593FFD29B20BA600A8DB9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C59400729B20BA600A8DB9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CD54125A12814F182BEDC83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyReadExam_SwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2CDC2DA4E95086AD2EF57B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC83EFAB52B76BB43330174D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyReadExam_Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C593FE529B20BA500A8DB9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */,
+				6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */,
+				6C593FEF29B20BA500A8DB9D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C593FFB29B20BA600A8DB9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C59400429B20BA600A8DB9D /* HyReadExam_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C59400529B20BA600A8DB9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C59401029B20BA600A8DB9D /* HyReadExam_SwiftUITestsLaunchTests.swift in Sources */,
+				6C59400E29B20BA600A8DB9D /* HyReadExam_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C59400129B20BA600A8DB9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C593FE829B20BA500A8DB9D /* HyReadExam_Swift */;
+			targetProxy = 6C59400029B20BA600A8DB9D /* PBXContainerItemProxy */;
+		};
+		6C59400B29B20BA600A8DB9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C593FE829B20BA500A8DB9D /* HyReadExam_Swift */;
+			targetProxy = 6C59400A29B20BA600A8DB9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6C593FF229B20BA500A8DB9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C593FF329B20BA500A8DB9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C593FF729B20BA600A8DB9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C593FF829B20BA600A8DB9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C59401129B20BA600A8DB9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C59401229B20BA600A8DB9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C59401429B20BA600A8DB9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0330AF565EE7C1821D8CDF92 /* Pods-HyReadExam_Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X5TFTKH3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HyReadExam_Swift/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Adda.chen.HyReadExam-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C59401529B20BA600A8DB9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94E136FADF22532E5214E039 /* Pods-HyReadExam_Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X5TFTKH3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HyReadExam_Swift/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Adda.chen.HyReadExam-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6C59401729B20BA600A8DB9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FF03BFC7391AC663DF18FC4 /* Pods-HyReadExam_SwiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X5TFTKH3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Adda.chen.HyReadExam-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HyReadExam_Swift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HyReadExam_Swift";
+			};
+			name = Debug;
+		};
+		6C59401829B20BA600A8DB9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B596E2E28823B537598CFA6 /* Pods-HyReadExam_SwiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X5TFTKH3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Adda.chen.HyReadExam-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HyReadExam_Swift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HyReadExam_Swift";
+			};
+			name = Release;
+		};
+		6C59401A29B20BA600A8DB9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD11B70BB41E1FE3035CB698 /* Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X5TFTKH3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Adda.chen.HyReadExam-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HyReadExam_Swift;
+			};
+			name = Debug;
+		};
+		6C59401B29B20BA600A8DB9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F420E8577E53CD904B67683 /* Pods-HyReadExam_Swift-HyReadExam_SwiftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3X5TFTKH3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Adda.chen.HyReadExam-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HyReadExam_Swift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C593FE429B20BA500A8DB9D /* Build configuration list for PBXProject "HyReadExam_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C59401129B20BA600A8DB9D /* Debug */,
+				6C59401229B20BA600A8DB9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C59401329B20BA600A8DB9D /* Build configuration list for PBXNativeTarget "HyReadExam_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C59401429B20BA600A8DB9D /* Debug */,
+				6C59401529B20BA600A8DB9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C59401629B20BA600A8DB9D /* Build configuration list for PBXNativeTarget "HyReadExam_SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C59401729B20BA600A8DB9D /* Debug */,
+				6C59401829B20BA600A8DB9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C59401929B20BA600A8DB9D /* Build configuration list for PBXNativeTarget "HyReadExam_SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C59401A29B20BA600A8DB9D /* Debug */,
+				6C59401B29B20BA600A8DB9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C593FE129B20BA500A8DB9D /* Project object */;
+}
