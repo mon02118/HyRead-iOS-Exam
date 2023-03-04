@@ -8,14 +8,17 @@
 import UIKit
 
 class UserListViewController: UIViewController {
-
+    private let vm = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        vm.fetchUserBooklist()
         
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 
 }
+
+
 
