@@ -37,7 +37,7 @@ enum DemoError: Error {
 
 struct ApiService {
     
-    func fetchUserBooklist(completion: @escaping (Result<[UserBookInfo], DemoError>) -> Void ) {
+    func fetchUserBooklist(completion: @escaping (Result<[UserBookInfoResponse], DemoError>) -> Void ) {
         UserBooklistRequest().send(completion: completion)
     }
 }

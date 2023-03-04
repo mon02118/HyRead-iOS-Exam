@@ -7,6 +7,22 @@
 
 import Foundation
 
+struct UserBookInfoResponse: Codable {
+    ///唯一碼
+    let uuid: Int
+    ///書封圖片
+    let coverUrl: String
+    ///出版日期
+    let publishDate: String
+    ///出版社
+    let publisher: String
+    ///作者
+    let author: String
+    ///書名
+    let title: String
+}
+
+
 
 extension ApiService {
     struct UserBooklistRequest: BaseRequest {
@@ -19,7 +35,7 @@ extension ApiService {
 extension ApiService.UserBooklistRequest {
     
     
-    func send(completion: @escaping (Result<[UserBookInfo], DemoError>) -> Void ){
+    func send(completion: @escaping (Result<[UserBookInfoResponse], DemoError>) -> Void ){
         
         let actionUrlString = baseUrlString + urlString
         
@@ -48,7 +64,7 @@ extension ApiService.UserBooklistRequest {
                 
                 let decoder = JSONDecoder()
                 do {
-                    let model = try decoder.decode([UserBookInfo].self, from: data)
+                    let model = try decoder.decode([UserBookInfoResponse].self, from: data)
                     completion(.success(model))
                 }
                 catch{
