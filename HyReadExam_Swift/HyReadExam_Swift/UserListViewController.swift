@@ -66,12 +66,6 @@ private extension UserListViewController {
 }
 
 
-//extension UserListViewController: UserBookInfoCollectiomViewCellDelegate {
-//    func didUpdateUserBookInfo(new: UserBookInfo) {
-//        vm.updateUserBookInfo(new: new)
-//    }
-//
-//}
 
 private extension UserListViewController {
     class UserBookInfoCollectiomViewLayout: UICollectionViewFlowLayout {

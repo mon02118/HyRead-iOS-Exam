@@ -8,14 +8,6 @@
 import Foundation
 
 
-protocol BaseRequest {
-    var baseUrlString: String { get }
-}
-
-extension BaseRequest {
-    var baseUrlString: String { "https://mservice.ebook.hyread.com.tw/exam" }
-}
-
 
 
 enum DemoError: Error {
