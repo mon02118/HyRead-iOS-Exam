@@ -77,15 +77,13 @@ extension HyReadRequestBase {
         
         if let data = data {
             DebugPrint("📦 [Receive Data]: " + (String(data: data, encoding: .utf8) ?? "No Utf8 Data.(無法解析!!)"))
-            let decoder = JSONDecoder()
-            do {
-                let model = try decoder.decode(T.self, from: data)
+            if let model = data.jsonDecoder(type: T.self) {
                 completionHandler(.success(model))
                 DebugPrint("Fetch Success.")
-            }
-            catch{
+            } else {
                 completionHandler(.failure(.decodeFail))
             }
+            
             return
         }
         
