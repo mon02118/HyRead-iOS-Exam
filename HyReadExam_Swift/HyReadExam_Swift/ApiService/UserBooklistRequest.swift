@@ -34,7 +34,7 @@ extension ApiService.UserBooklistRequest {
         
         let task = URLSession.shared.dataTask(with: request) { _data, _response, _error in
             if let error = _error {
-                print(error)
+                DebugPrint(error)
                 completion(.failure(.hasError))
                 return
             }
