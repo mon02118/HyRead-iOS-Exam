@@ -10,7 +10,6 @@ import Foundation
 
 extension ApiService {
     struct UserBooklistRequest: BaseRequest {
-        // 封装请求的 url 和 HTTP 方法
         let urlString: String = "/user-list"
         let httpMethod: String = "GET"
     }
@@ -45,9 +44,6 @@ extension ApiService.UserBooklistRequest {
                 completion(.failure(.responseFail))
                 return
             }
-            
-            
-            
             if let data = _data {
                 
                 let decoder = JSONDecoder()

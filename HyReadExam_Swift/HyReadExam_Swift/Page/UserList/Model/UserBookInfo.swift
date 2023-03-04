@@ -18,6 +18,8 @@ struct UserBookInfo: Codable {
     let publisher: String
     ///作者
     let author: String
+    ///書名
+    let title: String
 
 }
 

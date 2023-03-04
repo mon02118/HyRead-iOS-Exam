@@ -17,6 +17,8 @@
 		6C0D4A8629B2D9FE004D3D79 /* SqlLiteDBInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A8529B2D9FE004D3D79 /* SqlLiteDBInfo.swift */; };
 		6C0D4A8929B2DA32004D3D79 /* SqlLiteColumnOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A8829B2DA32004D3D79 /* SqlLiteColumnOptions.swift */; };
 		6C0D4A8B29B2DA4B004D3D79 /* SqlColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A8A29B2DA4B004D3D79 /* SqlColumn.swift */; };
+		6C0D4A8E29B2DE46004D3D79 /* UserBookInfoCollectiomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A8D29B2DE46004D3D79 /* UserBookInfoCollectiomViewCell.swift */; };
+		6C0D4A9029B2E879004D3D79 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A8F29B2E879004D3D79 /* ImageHelper.swift */; };
 		6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */; };
 		6C593FEF29B20BA500A8DB9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */; };
 		6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FF029B20BA500A8DB9D /* UserListViewController.swift */; };
@@ -60,6 +62,8 @@
 		6C0D4A8529B2D9FE004D3D79 /* SqlLiteDBInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteDBInfo.swift; sourceTree = "<group>"; };
 		6C0D4A8829B2DA32004D3D79 /* SqlLiteColumnOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteColumnOptions.swift; sourceTree = "<group>"; };
 		6C0D4A8A29B2DA4B004D3D79 /* SqlColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlColumn.swift; sourceTree = "<group>"; };
+		6C0D4A8D29B2DE46004D3D79 /* UserBookInfoCollectiomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBookInfoCollectiomViewCell.swift; sourceTree = "<group>"; };
+		6C0D4A8F29B2E879004D3D79 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		6C593FE929B20BA500A8DB9D /* HyReadExam_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyReadExam_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		6C0D4A7329B2CDAD004D3D79 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				6C0D4A8C29B2DE35004D3D79 /* View */,
 				6C0D4A7929B2CE1C004D3D79 /* Model */,
 				6C593FF029B20BA500A8DB9D /* UserListViewController.swift */,
 				6C0D4A7729B2CDDD004D3D79 /* UserListViewController+ViewModel.swift */,
@@ -171,6 +176,7 @@
 			children = (
 				6C0D4A8029B2D85C004D3D79 /* DebugPrint.swift */,
 				6C0D4A8429B2D9D9004D3D79 /* SqlLite */,
+				6C0D4A8F29B2E879004D3D79 /* ImageHelper.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -192,6 +198,14 @@
 				6C0D4A8A29B2DA4B004D3D79 /* SqlColumn.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6C0D4A8C29B2DE35004D3D79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D4A8D29B2DE46004D3D79 /* UserBookInfoCollectiomViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6C593FE029B20BA500A8DB9D = {
@@ -497,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0D4A8E29B2DE46004D3D79 /* UserBookInfoCollectiomViewCell.swift in Sources */,
 				6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */,
 				6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */,
 				6C0D4A6F29B2CA02004D3D79 /* ApiService.swift in Sources */,
@@ -505,6 +520,7 @@
 				6C0D4A7129B2CA4F004D3D79 /* UserBooklistRequest.swift in Sources */,
 				6C0D4A8629B2D9FE004D3D79 /* SqlLiteDBInfo.swift in Sources */,
 				6C0D4A7B29B2CE22004D3D79 /* UserBookInfo.swift in Sources */,
+				6C0D4A9029B2E879004D3D79 /* ImageHelper.swift in Sources */,
 				6C593FEF29B20BA500A8DB9D /* SceneDelegate.swift in Sources */,
 				6C0D4A7829B2CDDD004D3D79 /* UserListViewController+ViewModel.swift in Sources */,
 				6C0D4A8129B2D85C004D3D79 /* DebugPrint.swift in Sources */,
