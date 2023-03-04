@@ -51,7 +51,9 @@ private extension UserListViewController {
         vm.userBookListObservable
             .bind(to: userBookInfoCollectiomView.rx.items(cellIdentifier: UserBookInfoCollectiomViewCell.reuseIdentifier, cellType: UserBookInfoCollectiomViewCell.self)) { (row, model, cell) in
                 cell.setInfo(model)
-                cell.delegate = self
+                cell.didUpdateUserBookInfo = {[weak self] new in
+                    self?.vm.updateUserBookInfo(new: new, i: row)
+                }
             }
             .disposed(by: disposeBag)
         
@@ -64,12 +66,12 @@ private extension UserListViewController {
 }
 
 
-extension UserListViewController: UserBookInfoCollectiomViewCellDelegate {
-    func didUpdateUserBookInfo(new: UserBookInfo) {
-        vm.updateUserBookInfo(new: new)
-    }
-    
-}
+//extension UserListViewController: UserBookInfoCollectiomViewCellDelegate {
+//    func didUpdateUserBookInfo(new: UserBookInfo) {
+//        vm.updateUserBookInfo(new: new)
+//    }
+//
+//}
 
 private extension UserListViewController {
     class UserBookInfoCollectiomViewLayout: UICollectionViewFlowLayout {

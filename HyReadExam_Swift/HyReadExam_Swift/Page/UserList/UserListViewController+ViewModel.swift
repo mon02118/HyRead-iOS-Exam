@@ -33,7 +33,11 @@ extension UserListViewController {
             }
         }
         
-        func updateUserBookInfo(new: UserBookInfo) {
+        func updateUserBookInfo(new: UserBookInfo, i: Int) {
+            if dbModelList.isSafe(i) {
+                dbModelList[i].isFavorite.toggle()
+                userBookListObservable.accept(dbModelList)
+            }
             SqlLiteManager.shared.updateSqlLiteData(dbInfo,
                                                     conditionDict: ["UUID": "\(new.uuid)"],
                                                     setDict: ["IS_FAVORITE": "\(new.isFavorite.sqlString)"])

@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol UserBookInfoCollectiomViewCellDelegate: AnyObject {
-    func didUpdateUserBookInfo(new: UserBookInfo)
-}
-
 
 class UserBookInfoCollectiomViewCell: UICollectionViewCell {
     
@@ -22,11 +18,12 @@ class UserBookInfoCollectiomViewCell: UICollectionViewCell {
         titleLable.text = ""
         favoriteButton.isSelected = false
         userBookInfo = nil
+        
     }
     
-    private var userBookInfo: UserBookInfo?
+    var didUpdateUserBookInfo: ((UserBookInfo)->Void)?
     
-    weak var delegate: UserBookInfoCollectiomViewCellDelegate?
+    private var userBookInfo: UserBookInfo?
     
     private let containerView: UIView = {
         let v = UIView()
@@ -146,7 +143,7 @@ private extension UserBookInfoCollectiomViewCell {
         favoriteButton.isSelected.toggle()
         userBookInfo?.isFavorite = favoriteButton.isSelected
         if let info = userBookInfo {
-            delegate?.didUpdateUserBookInfo(new: info)
+            didUpdateUserBookInfo?(info)
         }
     }
 }

@@ -17,4 +17,12 @@ extension Array {
             return nil
         }
     }
+    
+    func isSafe(_ index: Int) -> Bool {
+        if indices.contains(index) {
+            return true
+        } else {
+            return false
+        }
+    }
 }
