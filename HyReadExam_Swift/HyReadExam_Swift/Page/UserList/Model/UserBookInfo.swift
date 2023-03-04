@@ -20,6 +20,71 @@ struct UserBookInfo: Codable {
     let author: String
     ///書名
     let title: String
-
+    ///是否收藏
+    var isFavorite: Bool = false
+    
+    
+    
+    init(uuid: Int, coverUrl: String, publishDate: String, publisher: String, author: String, title: String) {
+        self.uuid = uuid
+        self.coverUrl = coverUrl
+        self.publishDate = publishDate
+        self.publisher = publisher
+        self.author = author
+        self.title = title
+    }
+    
+    
+    init?(queryValues: [String]) {
+        guard let uuid = queryValues.getElement(0)?.int,
+            let coverUrl = queryValues.getElement(1),
+            let publishDate = queryValues.getElement(2),
+            let publisher = queryValues.getElement(3),
+            let author = queryValues.getElement(4),
+            let title = queryValues.getElement(5),
+            let isFavorite = queryValues.getElement(6)?.sqlToBool else { return nil }
+        
+        
+        self.uuid = uuid
+        self.coverUrl = coverUrl
+        self.publishDate = publishDate
+        self.publisher = publisher
+        self.author = author
+        self.title = title
+        self.isFavorite = isFavorite
+    }
+    
 }
+
+
+
+extension UserBookInfo: SqlLiteData {
+    var sqlValues: [Any?]  {
+        [uuid, coverUrl, publisher, publisher, author, title, isFavorite.sqlString]
+    }
+}
+
+struct UserBookInfoDB: SqlLiteDBInfo {
+
+    
+    
+    typealias D = UserBookInfo
+    var columns: [SqlColumn] = [
+        .init(columnName: "UUID", columnOptions: .primaryKey),
+        .init(columnName: "COVERURL"),
+        .init(columnName: "PUBLISHDATE"),
+        .init(columnName: "PUBLISHER"),
+        .init(columnName: "AUTHOR"),
+        .init(columnName: "TITLE"),
+        .init(columnName: "IS_FAVORITE"),
+    ]
+    
+    func convertQueryValuesToData(queryValues: [String]) -> UserBookInfo? {
+        UserBookInfo(queryValues: queryValues)
+    }
+    
+    
+}
+
+
 
