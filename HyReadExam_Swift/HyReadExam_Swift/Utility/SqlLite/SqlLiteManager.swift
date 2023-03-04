@@ -157,7 +157,6 @@ private extension SqlLiteManager {
                 infos.forEach { info in
                     do {
                         let script = dbInfo.getInsertOrReplaceScript()
-                        DebugPrint(script)
                         try db.executeUpdate(script, values: info?.sqlValues.map { $0 ?? "" })
                     } catch {
                         DebugPrint(error)
@@ -196,7 +195,6 @@ private extension SqlLiteManager {
         contentsQueue.sync {
             if openDatabaseConnection() {
                 let selectScript = dbInfo.getSelectAllScript(whereDict: whereDict, orderBy: orderBy)
-                DebugPrint(selectScript)
                 do {
                     let resultSet = try db.executeQuery(selectScript, values: nil)
                     var sqlLiteDataList: [I.D] = []

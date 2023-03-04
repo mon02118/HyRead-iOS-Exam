@@ -24,59 +24,12 @@ struct UserBookInfoResponse: Codable {
 
 
 
-extension ApiService {
-    struct UserBooklistRequest: BaseRequest {
-        let urlString: String = "/user-list"
-        let httpMethod: String = "GET"
-    }
-}
-
-
-extension ApiService.UserBooklistRequest {
-    
-    
-    func send(completion: @escaping (Result<[UserBookInfoResponse], DemoError>) -> Void ){
-        
-        let actionUrlString = baseUrlString + urlString
-        
-        guard let url = URL(string: actionUrlString) else {
-            completion(.failure(.urlFail))
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = httpMethod
-        request.addValue("application/json", forHTTPHeaderField: "Content-type")
-        
-        let task = URLSession.shared.dataTask(with: request) { _data, _response, _error in
-            if let error = _error {
-                DebugPrint(error)
-                completion(.failure(.hasError))
-                return
-            }
-            
-            guard let httpResponse = _response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode)
-            else {
-                completion(.failure(.responseFail))
-                return
-            }
-            if let data = _data {
-                
-                let decoder = JSONDecoder()
-                do {
-                    let model = try decoder.decode([UserBookInfoResponse].self, from: data)
-                    completion(.success(model))
-                }
-                catch{
-                    completion(.failure(.decodeFail))
-                }
-            }
-            
-        }
-        
-        task.resume()
-    }
-    
-    
+class UserBookRequest: HyReadRequestBase {
+    override var address: String { return "exam/user-list" }
+    /// HTTP的Method
+    override var method: HttpMethod { return .get }
+    /// PostContent
+    override var postContentType: PostContentType { return .json }
     
 }
+

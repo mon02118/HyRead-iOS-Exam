@@ -46,7 +46,7 @@ private extension UserListViewController {
     }
     
     func bindData() {
-        
+        vm.fetchDbModelList()
         vm.fetchUserBooklist()
         vm.userBookListObservable
             .bind(to: userBookInfoCollectiomView.rx.items(cellIdentifier: UserBookInfoCollectiomViewCell.reuseIdentifier, cellType: UserBookInfoCollectiomViewCell.self)) { (row, model, cell) in

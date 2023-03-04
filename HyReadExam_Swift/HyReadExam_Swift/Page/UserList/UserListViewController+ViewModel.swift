@@ -12,14 +12,22 @@ extension UserListViewController {
     class ViewModel {
                
         let userBookListObservable = BehaviorRelay<[UserBookInfo]>(value: [])
+        
         private let dbInfo = UserBookInfoDB()
+        private var dbModelList: [UserBookInfo] = []
+        
+        func fetchDbModelList() {
+            dbModelList = SqlLiteManager.shared.getSqlLiteDataFromTable(dbInfo, orderBy: .asc("UUID"))
+            let origiModelList = userBookListObservable.value
+            let setModelList = origiModelList + dbModelList
+            userBookListObservable.accept(setModelList)
+        }
         
         func fetchUserBooklist() {
             ApiService().fetchUserBooklist { [weak self] result in
                 guard let weakSelf = self else { return }
                 switch result {
-                case .success(let response):
-                    DispatchQueue.main.async { weakSelf.saveToDB(response) }
+                case .success(let response): weakSelf.saveToDB(response)
                 case .failure(let error): DebugPrint(error.msg)
                 }
             }
@@ -38,16 +46,13 @@ extension UserListViewController {
 private extension UserListViewController.ViewModel {
     
     func saveToDB(_ response: [UserBookInfoResponse]) {
-        let dbModelList = SqlLiteManager.shared.getSqlLiteDataFromTable(dbInfo, orderBy: .asc("UUID"))
         let dbUUIDSet = dbModelList.map(\.uuid)
-        
         let modelList = response.map { $0.toModel() }
             .filter { !dbUUIDSet.contains($0.uuid) }
         SqlLiteManager.shared.insertSqlLiteDataIntoTable(dbInfo, infos: modelList)
-        
-        let newModelList = dbModelList + modelList
-        
-        userBookListObservable.accept(newModelList)
+        if modelList.isEmpty { return }
+        dbModelList += modelList
+        userBookListObservable.accept(dbModelList)
         
         
     }

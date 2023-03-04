@@ -20,14 +20,15 @@ extension BaseRequest {
 
 enum DemoError: Error {
     case urlFail
-    case hasError
+    case hasError(String)
     case responseFail
     case decodeFail
+    
     
     var msg: String {
         switch self {
         case .urlFail: return "urlFail"
-        case .hasError: return "hasError"
+        case .hasError(let msg): return "hasError \(msg)"
         case .responseFail: return "responseFail"
         case .decodeFail: return "decodeFail"
         }
@@ -38,6 +39,7 @@ enum DemoError: Error {
 struct ApiService {
     
     func fetchUserBooklist(completion: @escaping (Result<[UserBookInfoResponse], DemoError>) -> Void ) {
-        UserBooklistRequest().send(completion: completion)
+        UserBookRequest().send(completionHandler: completion)
+        
     }
 }
