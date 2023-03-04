@@ -10,27 +10,82 @@ import XCTest
 
 final class HyReadExam_SwiftTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func test_fetchUserBooklist() {
+        ApiService().fetchUserBooklist { result in
+            switch result {
+            case .success(let response): XCTAssertFalse(response.isEmpty)
+            case .failure(let error): XCTFail(error.msg)
+            }
         }
     }
+    
+    
+    func test_UserBookInfoResponse () {
+        let responseStr = """
+        {
+          "uuid": 72,
+          "title": "國家公園 2010.03 春季刊:美景動人 文宣入心",
+          "coverUrl": "https://webcdn2.ebook.hyread.com.tw/bookcover/1316820124811040516.JPG",
+          "publishDate": "2010.03",
+          "publisher": "內政部營建署",
+          "author": "內政部營建署"
+        }
+"""
+        let data = responseStr.data(using: .utf8)
+        if let model = data?.jsonDecoder(type: UserBookInfoResponse.self) {
+            XCTAssertEqual(model.uuid, 72)
+            XCTAssertEqual(model.title, "國家公園 2010.03 春季刊:美景動人 文宣入心")
+            XCTAssertEqual(model.coverUrl, "https://webcdn2.ebook.hyread.com.tw/bookcover/1316820124811040516.JPG")
+            XCTAssertEqual(model.publishDate, "2010.03")
+            XCTAssertEqual(model.publisher, "內政部營建署")
+            XCTAssertEqual(model.author, "內政部營建署")
+        } else {
+            XCTFail("model can't decode")
+        }
+        
+        
+    }
+    
+    
+    func test_UserBookInfo () {
+        let queryValues = ["72",
+                           "https://webcdn2.ebook.hyread.com.tw/bookcover/1316820124811040516.JPG",
+                           "2010.03",
+                           "內政部營建署",
+                           "內政部營建署",
+                           "國家公園 2010.03 春季刊:美景動人 文宣入心",
+                           "TRUE"]
+        guard let model = UserBookInfo(queryValues: queryValues) else { return }
+        
+        XCTAssertEqual(model.uuid, 72)
+        XCTAssertEqual(model.title, "國家公園 2010.03 春季刊:美景動人 文宣入心")
+        XCTAssertEqual(model.coverUrl, "https://webcdn2.ebook.hyread.com.tw/bookcover/1316820124811040516.JPG")
+        XCTAssertEqual(model.publishDate, "2010.03")
+        XCTAssertEqual(model.publisher, "內政部營建署")
+        XCTAssertEqual(model.author, "內政部營建署")
+        XCTAssertEqual(model.isFavorite, true)
+        let queryValues2 = ["72",
+                           "https://webcdn2.ebook.hyread.com.tw/bookcover/1316820124811040516.JPG",
+                           "2010.03",
+                           "內政部營建署",
+                           "內政部營建署",
+                           "國家公園 2010.03 春季刊:美景動人 文宣入心",
+                           "FALSE"]
+        guard let model = UserBookInfo(queryValues: queryValues2) else { return }
+        
+        XCTAssertEqual(model.uuid, 72)
+        XCTAssertEqual(model.title, "國家公園 2010.03 春季刊:美景動人 文宣入心")
+        XCTAssertEqual(model.coverUrl, "https://webcdn2.ebook.hyread.com.tw/bookcover/1316820124811040516.JPG")
+        XCTAssertEqual(model.publishDate, "2010.03")
+        XCTAssertEqual(model.publisher, "內政部營建署")
+        XCTAssertEqual(model.author, "內政部營建署")
+        XCTAssertEqual(model.isFavorite, false)
+        
+    }
+    
+    
+    
+    
+    
 
 }
