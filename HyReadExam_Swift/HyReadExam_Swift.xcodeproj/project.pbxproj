@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		285871FFA05C9FED9C69BD0F /* Pods_HyReadExam_Swift_HyReadExam_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4D005E47C238C2462B9208 /* Pods_HyReadExam_Swift_HyReadExam_SwiftUITests.framework */; };
+		6C0D4A6F29B2CA02004D3D79 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A6E29B2CA02004D3D79 /* ApiService.swift */; };
+		6C0D4A7129B2CA4F004D3D79 /* UserBooklistRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A7029B2CA4F004D3D79 /* UserBooklistRequest.swift */; };
+		6C0D4A7829B2CDDD004D3D79 /* UserListViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A7729B2CDDD004D3D79 /* UserListViewController+ViewModel.swift */; };
+		6C0D4A7B29B2CE22004D3D79 /* UserBookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A7A29B2CE22004D3D79 /* UserBookInfo.swift */; };
 		6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */; };
 		6C593FEF29B20BA500A8DB9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */; };
 		6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FF029B20BA500A8DB9D /* UserListViewController.swift */; };
@@ -42,10 +46,14 @@
 		0330AF565EE7C1821D8CDF92 /* Pods-HyReadExam_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_Swift.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam_Swift/Pods-HyReadExam_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		4B596E2E28823B537598CFA6 /* Pods-HyReadExam_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_SwiftTests.release.xcconfig"; path = "Target Support Files/Pods-HyReadExam_SwiftTests/Pods-HyReadExam_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		4FF03BFC7391AC663DF18FC4 /* Pods-HyReadExam_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam_SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam_SwiftTests/Pods-HyReadExam_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C0D4A6E29B2CA02004D3D79 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		6C0D4A7029B2CA4F004D3D79 /* UserBooklistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBooklistRequest.swift; sourceTree = "<group>"; };
+		6C0D4A7729B2CDDD004D3D79 /* UserListViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		6C0D4A7A29B2CE22004D3D79 /* UserBookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBookInfo.swift; sourceTree = "<group>"; };
 		6C593FE929B20BA500A8DB9D /* HyReadExam_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyReadExam_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C593FF029B20BA500A8DB9D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		6C593FF029B20BA500A8DB9D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserListViewController.swift; path = ../../UserListViewController.swift; sourceTree = "<group>"; };
 		6C593FF329B20BA500A8DB9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C593FF529B20BA600A8DB9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C593FF829B20BA600A8DB9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,6 +109,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6C0D4A6D29B2C9ED004D3D79 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D4A6E29B2CA02004D3D79 /* ApiService.swift */,
+				6C0D4A7029B2CA4F004D3D79 /* UserBooklistRequest.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		6C0D4A7229B2CD9D004D3D79 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D4A7329B2CDAD004D3D79 /* UserList */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		6C0D4A7329B2CDAD004D3D79 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D4A7929B2CE1C004D3D79 /* Model */,
+				6C593FF029B20BA500A8DB9D /* UserListViewController.swift */,
+				6C0D4A7729B2CDDD004D3D79 /* UserListViewController+ViewModel.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		6C0D4A7929B2CE1C004D3D79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C0D4A7A29B2CE22004D3D79 /* UserBookInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6C593FE029B20BA500A8DB9D = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +169,10 @@
 		6C593FEB29B20BA500A8DB9D /* HyReadExam_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				6C0D4A7229B2CD9D004D3D79 /* Page */,
+				6C0D4A6D29B2C9ED004D3D79 /* ApiService */,
 				6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */,
 				6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */,
-				6C593FF029B20BA500A8DB9D /* UserListViewController.swift */,
 				6C593FF229B20BA500A8DB9D /* Main.storyboard */,
 				6C593FF529B20BA600A8DB9D /* Assets.xcassets */,
 				6C593FF729B20BA600A8DB9D /* LaunchScreen.storyboard */,
@@ -164,7 +208,6 @@
 				4FF03BFC7391AC663DF18FC4 /* Pods-HyReadExam_SwiftTests.debug.xcconfig */,
 				4B596E2E28823B537598CFA6 /* Pods-HyReadExam_SwiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -373,7 +416,11 @@
 			files = (
 				6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */,
 				6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */,
+				6C0D4A6F29B2CA02004D3D79 /* ApiService.swift in Sources */,
+				6C0D4A7129B2CA4F004D3D79 /* UserBooklistRequest.swift in Sources */,
+				6C0D4A7B29B2CE22004D3D79 /* UserBookInfo.swift in Sources */,
 				6C593FEF29B20BA500A8DB9D /* SceneDelegate.swift in Sources */,
+				6C0D4A7829B2CDDD004D3D79 /* UserListViewController+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

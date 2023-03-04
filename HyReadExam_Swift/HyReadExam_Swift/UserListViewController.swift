@@ -8,12 +8,13 @@
 import UIKit
 
 class UserListViewController: UIViewController {
-
+    private let vm = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        Service().fetch()
+        vm.fetchUserBooklist()
         
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 
@@ -21,25 +22,3 @@ class UserListViewController: UIViewController {
 
 
 
-struct Service {
-    func fetch() {
-        let urlString = "https://mservice.ebook.hyread.com.tw/exam/user-list"
-        guard let url = URL(string: urlString) else { return }
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-type")
-        
-        let task = URLSession.shared.dataTask(with: request) { _data, _response, _error in
-            if let error = _error {
-                print(error)
-            }
-            if let data = _data {
-                let str = String(data: data, encoding: .utf8)
-                print(str)
-            }
-            
-        }
-        
-        task.resume()
-    }
-}
