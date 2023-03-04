@@ -51,6 +51,7 @@ private extension UserListViewController {
         vm.userBookListObservable
             .bind(to: userBookInfoCollectiomView.rx.items(cellIdentifier: UserBookInfoCollectiomViewCell.reuseIdentifier, cellType: UserBookInfoCollectiomViewCell.self)) { (row, model, cell) in
                 cell.setInfo(model)
+                cell.delegate = self
             }
             .disposed(by: disposeBag)
         
@@ -63,6 +64,13 @@ private extension UserListViewController {
 }
 
 
+extension UserListViewController: UserBookInfoCollectiomViewCellDelegate {
+    func didUpdateUserBookInfo(new: UserBookInfo) {
+        vm.updateUserBookInfo(new: new)
+    }
+    
+}
+
 private extension UserListViewController {
     class UserBookInfoCollectiomViewLayout: UICollectionViewFlowLayout {
         override func prepare() {
@@ -72,7 +80,7 @@ private extension UserListViewController {
             let lineSpacing: CGFloat = 10
             let edgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             let count: CGFloat = 3
-            let width = deviceSize.width/count - edgeInsets.left - edgeInsets.right - itemSpacing
+            let width = deviceSize.width/count - edgeInsets.left/2 - edgeInsets.right/2 - itemSpacing
             let height = width*2
             let itemSize = CGSize(width: width , height: height)
             
