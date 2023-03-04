@@ -222,6 +222,7 @@
 				6C593FE529B20BA500A8DB9D /* Sources */,
 				6C593FE629B20BA500A8DB9D /* Frameworks */,
 				6C593FE729B20BA500A8DB9D /* Resources */,
+				0697CAE11D55DAE1E9CC6A4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +260,7 @@
 				6C59400529B20BA600A8DB9D /* Sources */,
 				6C59400629B20BA600A8DB9D /* Frameworks */,
 				6C59400729B20BA600A8DB9D /* Resources */,
+				6C5C7E331BDE68EC85167A65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -341,6 +343,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0697CAE11D55DAE1E9CC6A4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyReadExam_Swift/Pods-HyReadExam_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyReadExam_Swift/Pods-HyReadExam_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HyReadExam_Swift/Pods-HyReadExam_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0CD54125A12814F182BEDC83 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,6 +380,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C5C7E331BDE68EC85167A65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests/Pods-HyReadExam_Swift-HyReadExam_SwiftUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D2CDC2DA4E95086AD2EF57B6 /* [CP] Check Pods Manifest.lock */ = {
