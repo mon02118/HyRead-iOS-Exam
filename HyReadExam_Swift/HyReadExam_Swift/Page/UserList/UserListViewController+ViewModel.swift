@@ -9,14 +9,17 @@
 import RxCocoa
 
 extension UserListViewController {
+    
     class ViewModel {
                
         let userBookListObservable = BehaviorRelay<[UserBookInfo]>(value: [])
+        let tipObservable = BehaviorRelay<TipType>(value: .none)
         
         private let dbInfo = UserBookInfoDB()
         private var dbModelList: [UserBookInfo] = []
         
         func fetchDbModelList() {
+            tipObservable.accept(.loadingDB)
             dbModelList = SqlLiteManager.shared.getSqlLiteDataFromTable(dbInfo, orderBy: .asc("UUID"))
             let origiModelList = userBookListObservable.value
             let setModelList = origiModelList + dbModelList
@@ -24,6 +27,7 @@ extension UserListViewController {
         }
         
         func fetchUserBooklist() {
+            tipObservable.accept(.loadingNetwork)
             ApiService().fetchUserBooklist { [weak self] result in
                 guard let weakSelf = self else { return }
                 switch result {
@@ -43,7 +47,20 @@ extension UserListViewController {
                                                     setDict: ["IS_FAVORITE": "\(new.isFavorite.sqlString)"])
         }
         
+        func removeDBData() {
+            SqlLiteManager.shared.deleteSqlLiteTable(dbInfo)
+            dbModelList = []
+            userBookListObservable.accept(dbModelList)
+        }
         
+        func filterFavoriteData(isFavorite: Bool) {
+            let setModelList = dbModelList.filter { $0.isFavorite == isFavorite }
+            userBookListObservable.accept(setModelList)
+        }
+        func showAllData() {
+            userBookListObservable.accept(dbModelList)
+        }
+   
     }
 }
 
@@ -54,9 +71,19 @@ private extension UserListViewController.ViewModel {
         let modelList = response.map { $0.toModel() }
             .filter { !dbUUIDSet.contains($0.uuid) }
         SqlLiteManager.shared.insertSqlLiteDataIntoTable(dbInfo, infos: modelList)
+        
+        tipObservable.accept(.loadingNetwork)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {[weak self] in
+            self?.tipObservable.accept(.finish)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {[weak self] in
+            self?.tipObservable.accept(.close)
+        }
         if modelList.isEmpty { return }
         dbModelList += modelList
         userBookListObservable.accept(dbModelList)
+       
+        
         
         
     }

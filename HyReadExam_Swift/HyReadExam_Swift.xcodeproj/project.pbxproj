@@ -27,6 +27,7 @@
 		6C0D4A9D29B32ABD004D3D79 /* RequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A9C29B32ABD004D3D79 /* RequestBase.swift */; };
 		6C0D4A9F29B32B99004D3D79 /* HyReadRequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A9E29B32B99004D3D79 /* HyReadRequestBase.swift */; };
 		6C0D4AA129B34B79004D3D79 /* Data+jsonDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4AA029B34B79004D3D79 /* Data+jsonDecode.swift */; };
+		6C50166329B3774B00F71CBE /* UserListViewController+TipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50166229B3774B00F71CBE /* UserListViewController+TipType.swift */; };
 		6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */; };
 		6C593FEF29B20BA500A8DB9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */; };
 		6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FF029B20BA500A8DB9D /* UserListViewController.swift */; };
@@ -80,6 +81,7 @@
 		6C0D4A9C29B32ABD004D3D79 /* RequestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBase.swift; sourceTree = "<group>"; };
 		6C0D4A9E29B32B99004D3D79 /* HyReadRequestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadRequestBase.swift; sourceTree = "<group>"; };
 		6C0D4AA029B34B79004D3D79 /* Data+jsonDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+jsonDecode.swift"; sourceTree = "<group>"; };
+		6C50166229B3774B00F71CBE /* UserListViewController+TipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListViewController+TipType.swift"; sourceTree = "<group>"; };
 		6C593FE929B20BA500A8DB9D /* HyReadExam_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyReadExam_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				6C0D4A7929B2CE1C004D3D79 /* Model */,
 				6C593FF029B20BA500A8DB9D /* UserListViewController.swift */,
 				6C0D4A7729B2CDDD004D3D79 /* UserListViewController+ViewModel.swift */,
+				6C50166229B3774B00F71CBE /* UserListViewController+TipType.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */,
 				6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */,
 				6C0D4A6F29B2CA02004D3D79 /* ApiService.swift in Sources */,
+				6C50166329B3774B00F71CBE /* UserListViewController+TipType.swift in Sources */,
 				6C0D4A9929B31484004D3D79 /* Bool+format.swift in Sources */,
 				6C0D4A9329B2F6B5004D3D79 /* Array+getElement.swift in Sources */,
 				6C0D4A9729B30BDD004D3D79 /* ImageAssets.swift in Sources */,

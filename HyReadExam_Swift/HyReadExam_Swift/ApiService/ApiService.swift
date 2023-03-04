@@ -8,8 +8,6 @@
 import Foundation
 
 
-
-
 enum DemoError: Error {
     case urlFail
     case hasError(String)
@@ -35,3 +33,5 @@ struct ApiService {
         
     }
 }
+
+
