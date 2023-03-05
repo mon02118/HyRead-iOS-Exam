@@ -28,6 +28,7 @@
 		6C0D4A9F29B32B99004D3D79 /* HyReadRequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4A9E29B32B99004D3D79 /* HyReadRequestBase.swift */; };
 		6C0D4AA129B34B79004D3D79 /* Data+jsonDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D4AA029B34B79004D3D79 /* Data+jsonDecode.swift */; };
 		6C50166329B3774B00F71CBE /* UserListViewController+TipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50166229B3774B00F71CBE /* UserListViewController+TipType.swift */; };
+		6C50166529B4385300F71CBE /* PreviewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50166429B4385300F71CBE /* PreviewImageViewController.swift */; };
 		6C593FED29B20BA500A8DB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */; };
 		6C593FEF29B20BA500A8DB9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */; };
 		6C593FF129B20BA500A8DB9D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C593FF029B20BA500A8DB9D /* UserListViewController.swift */; };
@@ -82,10 +83,11 @@
 		6C0D4A9E29B32B99004D3D79 /* HyReadRequestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadRequestBase.swift; sourceTree = "<group>"; };
 		6C0D4AA029B34B79004D3D79 /* Data+jsonDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+jsonDecode.swift"; sourceTree = "<group>"; };
 		6C50166229B3774B00F71CBE /* UserListViewController+TipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListViewController+TipType.swift"; sourceTree = "<group>"; };
+		6C50166429B4385300F71CBE /* PreviewImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImageViewController.swift; sourceTree = "<group>"; };
 		6C593FE929B20BA500A8DB9D /* HyReadExam_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyReadExam_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C593FEC29B20BA500A8DB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C593FEE29B20BA500A8DB9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C593FF029B20BA500A8DB9D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserListViewController.swift; path = ../../UserListViewController.swift; sourceTree = "<group>"; };
+		6C593FF029B20BA500A8DB9D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		6C593FF329B20BA500A8DB9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C593FF529B20BA600A8DB9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C593FF829B20BA600A8DB9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				6C0D4A8C29B2DE35004D3D79 /* View */,
 				6C0D4A7929B2CE1C004D3D79 /* Model */,
+				6C50166429B4385300F71CBE /* PreviewImageViewController.swift */,
 				6C593FF029B20BA500A8DB9D /* UserListViewController.swift */,
 				6C0D4A7729B2CDDD004D3D79 /* UserListViewController+ViewModel.swift */,
 				6C50166229B3774B00F71CBE /* UserListViewController+TipType.swift */,
@@ -195,8 +198,8 @@
 		6C0D4A7D29B2D830004D3D79 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				6C0D4A8029B2D85C004D3D79 /* DebugPrint.swift */,
 				6C0D4A8429B2D9D9004D3D79 /* SqlLite */,
+				6C0D4A8029B2D85C004D3D79 /* DebugPrint.swift */,
 				6C0D4A8F29B2E879004D3D79 /* ImageHelper.swift */,
 				6C0D4A9629B30BDD004D3D79 /* ImageAssets.swift */,
 			);
@@ -560,6 +563,7 @@
 				6C0D4A7129B2CA4F004D3D79 /* UserBooklistRequest.swift in Sources */,
 				6C0D4A8629B2D9FE004D3D79 /* SqlLiteDBInfo.swift in Sources */,
 				6C0D4A9B29B31854004D3D79 /* UIView+applyGradient.swift in Sources */,
+				6C50166529B4385300F71CBE /* PreviewImageViewController.swift in Sources */,
 				6C0D4A9F29B32B99004D3D79 /* HyReadRequestBase.swift in Sources */,
 				6C0D4A9529B2F7E9004D3D79 /* String+format.swift in Sources */,
 				6C0D4A7B29B2CE22004D3D79 /* UserBookInfo.swift in Sources */,

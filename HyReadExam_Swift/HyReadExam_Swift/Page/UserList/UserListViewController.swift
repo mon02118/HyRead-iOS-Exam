@@ -28,8 +28,8 @@ class UserListViewController: UIViewController {
         let layout = UserBookInfoCollectiomViewLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.register(UserBookInfoCollectiomViewCell.self, forCellWithReuseIdentifier: UserBookInfoCollectiomViewCell.reuseIdentifier)
         
+        cv.register(UserBookInfoCollectiomViewCell.self, forCellWithReuseIdentifier: UserBookInfoCollectiomViewCell.reuseIdentifier)
         return cv
     }()
     
@@ -45,7 +45,7 @@ class UserListViewController: UIViewController {
 private extension UserListViewController {
     func setupUI() {
         title = "我的書櫃"
-        let addButton = UIBarButtonItem(image: UIImage(systemName: "filemenu.and.cursorarrow"), menu: getMenu())
+        let addButton = UIBarButtonItem(image: UIImage(systemName: "filemenu.and.cursorarrow"), menu: getDebugMenu())
         
         navigationItem.rightBarButtonItem = addButton
         
@@ -57,8 +57,8 @@ private extension UserListViewController {
             tipLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             userBookInfoCollectiomView.topAnchor.constraint(equalTo: tipLabel.bottomAnchor),
             userBookInfoCollectiomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            userBookInfoCollectiomView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            userBookInfoCollectiomView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            userBookInfoCollectiomView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            userBookInfoCollectiomView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
         
         tipHeight = tipLabel.heightAnchor.constraint(equalToConstant: 0)
@@ -90,10 +90,10 @@ private extension UserListViewController {
             }
             .disposed(by: disposeBag)
         
-        
     }
+   
     
-    func getMenu() -> UIMenu{
+    func getDebugMenu() -> UIMenu{
         let settingMenu = UIMenu(title: "", children: [
             UIAction(title: "刪除資料庫", image: UIImage(systemName: "minus.diamond")) {[weak self] action in
                 self?.vm.removeDBData()
@@ -113,6 +113,16 @@ private extension UserListViewController {
         ])
         return settingMenu
     }
+    func getDetailInfoMenu(info: UserBookInfo) -> UIMenu{
+        let detailMenu = UIMenu(title: "", children: [
+            UIAction(title: "\(info.publishDate)", image: UIImage(systemName: "calendar.badge.clock")) {_ in },
+            UIAction(title: "\(info.publisher)", image: UIImage(systemName: "house"))  {_ in },
+            UIAction(title: "\(info.author)", image: UIImage(systemName: "person"))  {_ in },
+            UIAction(title: "\(info.title)", image: UIImage(systemName: "highlighter"))  {_ in },
+            
+        ])
+        return detailMenu
+    }
     func fetchData() {
         
         
@@ -124,25 +134,62 @@ private extension UserListViewController {
         }
     }
 }
+extension UserListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemsAt indexPaths: [IndexPath], point: CGPoint) -> UIContextMenuConfiguration? {
+        guard let fitstIndex = indexPaths.first?.row,
+              let model = vm.getUserBookInfo(i: fitstIndex)
+        else { return nil }
+        
+        let config = UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: {
+                let previewImageVC = PreviewImageViewController()
+                previewImageVC.imageUrlString = model.coverUrl
+                return previewImageVC
+            },
+            actionProvider:  {[weak self] _ in
+            return self?.getDetailInfoMenu(info: model)
+        })
+        
 
+        return config
+    }
+}
 
 
 private extension UserListViewController {
     class UserBookInfoCollectiomViewLayout: UICollectionViewFlowLayout {
         override func prepare() {
             super.prepare()
+            // 取得目前裝置的螢幕尺寸
             let deviceSize = UIScreen.main.bounds.size
+            
+            // 設定每個項目的水平和垂直間距
             let itemSpacing: CGFloat = 10
             let lineSpacing: CGFloat = 10
+            
+            // 設定section的邊緣間距
             let edgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            let count: CGFloat = 3
-            let width = deviceSize.width/count - edgeInsets.left/2 - edgeInsets.right/2 - itemSpacing
-            let height = width*2
+            
+            // 計算每一行最多能放幾個項目，取決於裝置的寬度以及項目的固定寬度
+            var count = Int((deviceSize.width)/150.0)
+            
+            // 如果計算出來的項目數小於3，則設置為3（最少要放3個項目）
+            if count < 3 { count = 3 }
+            
+            // 計算每個項目的寬度和高度，考慮間距和邊緣
+            let width = deviceSize.width/CGFloat(count) - edgeInsets.left/2 - edgeInsets.right/2 - itemSpacing
+            let height = width*1.8
+            
+            // 設置項目的尺寸
             let itemSize = CGSize(width: width , height: height)
             
+            // 設置水平和垂直間距以及section的邊緣間距
             minimumLineSpacing = lineSpacing
             minimumInteritemSpacing = itemSpacing
             sectionInset = edgeInsets
+            
+            // 設置項目的尺寸
             self.itemSize = itemSize
         }
     }
