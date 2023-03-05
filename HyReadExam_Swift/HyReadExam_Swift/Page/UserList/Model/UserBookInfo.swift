@@ -60,7 +60,7 @@ struct UserBookInfo: Codable {
 
 extension UserBookInfo: SqlLiteData {
     var sqlValues: [Any?]  {
-        [uuid, coverUrl, publisher, publisher, author, title, isFavorite.sqlString]
+        [uuid, coverUrl, publishDate, publisher, author, title, isFavorite.sqlString]
     }
 }
 
@@ -70,7 +70,7 @@ struct UserBookInfoDB: SqlLiteDBInfo {
     
     typealias D = UserBookInfo
     var columns: [SqlColumn] = [
-        .init(columnName: "UUID", columnOptions: .primaryKey),
+        .init(columnName: "UUID", dataType: .integer, columnOptions: .primaryKey),
         .init(columnName: "COVERURL"),
         .init(columnName: "PUBLISHDATE"),
         .init(columnName: "PUBLISHER"),
