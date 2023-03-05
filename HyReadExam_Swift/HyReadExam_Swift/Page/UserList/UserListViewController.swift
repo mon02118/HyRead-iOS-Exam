@@ -5,7 +5,6 @@
 //  Created by AddA on 2023/3/3.
 //
 
-import UIKit
 import RxSwift
 import RxCocoa
 
@@ -17,7 +16,6 @@ class UserListViewController: UIViewController {
     private let tipLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = "TEST"
         lbl.backgroundColor = .gray
         return lbl
     }()
@@ -45,8 +43,8 @@ class UserListViewController: UIViewController {
 private extension UserListViewController {
     func setupUI() {
         title = "我的書櫃"
-        let addButton = UIBarButtonItem(image: UIImage(systemName: "filemenu.and.cursorarrow"), menu: getDebugMenu())
         
+        let addButton = UIBarButtonItem(image: UIImage(systemName: "filemenu.and.cursorarrow"), menu: getDebugMenu())
         navigationItem.rightBarButtonItem = addButton
         
         view.addSubview(userBookInfoCollectiomView)
@@ -89,7 +87,9 @@ private extension UserListViewController {
                 }
             }
             .disposed(by: disposeBag)
-        
+        userBookInfoCollectiomView.rx
+            .setDelegate(self)
+            .disposed(by: disposeBag)
     }
    
     
@@ -97,6 +97,9 @@ private extension UserListViewController {
         let settingMenu = UIMenu(title: "", children: [
             UIAction(title: "刪除資料庫", image: UIImage(systemName: "minus.diamond")) {[weak self] action in
                 self?.vm.removeDBData()
+            },
+            UIAction(title: "刪除圖片快取", image: UIImage(systemName: "minus.diamond")) { _ in
+                ImageHelper().clearCache()
             },
             UIAction(title: "重新抓取資料", image: UIImage(systemName: "arrow.counterclockwise.icloud")) { [weak self] action in
                 self?.vm.fetchUserBooklist()

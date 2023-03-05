@@ -54,7 +54,9 @@ class UserBookInfoCollectiomViewCell: UICollectionViewCell {
     private let titleLable: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.numberOfLines = 2
+        lbl.numberOfLines = 0
+        lbl.textAlignment = .left
+        lbl.sizeToFit()
         lbl.font = .systemFont(ofSize: 14)
         return lbl
     }()
@@ -134,7 +136,6 @@ private extension UserBookInfoCollectiomViewCell {
             titleLable.topAnchor.constraint(equalTo: bookImageView.bottomAnchor),
             titleLable.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             titleLable.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            titleLable.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
         ])
     }
     

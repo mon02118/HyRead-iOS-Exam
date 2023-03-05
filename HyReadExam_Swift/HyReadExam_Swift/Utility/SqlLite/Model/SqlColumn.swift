@@ -11,22 +11,13 @@ import Foundation
 struct SqlColumn {
     
     enum SqlDataType {
-        case null
         case integer
-        case real
         case text
-        case blob
         
         var sqlText: String {
             switch self {
-            case .blob:
-                return "BLOB"
             case .integer:
                 return "INTEGER"
-            case .null:
-                return "NULL"
-            case .real:
-                return "REAL"
             case .text:
                 return "TEXT"
                 

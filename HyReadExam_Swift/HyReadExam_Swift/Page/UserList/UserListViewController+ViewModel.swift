@@ -60,6 +60,10 @@ extension UserListViewController {
         func showAllData() {
             userBookListObservable.accept(dbModelList)
         }
+        
+        func getUserBookInfo(i: Int) -> UserBookInfo? {
+            userBookListObservable.value.getElement(i)
+        }
    
     }
 }
@@ -68,7 +72,8 @@ private extension UserListViewController.ViewModel {
     
     func saveToDB(_ response: [UserBookInfoResponse]) {
         let dbUUIDSet = dbModelList.map(\.uuid)
-        let modelList = response.map { $0.toModel() }
+        let modelList = response
+            .map { $0.toModel() }
             .filter { !dbUUIDSet.contains($0.uuid) }
         SqlLiteManager.shared.insertSqlLiteDataIntoTable(dbInfo, infos: modelList)
         
