@@ -56,7 +56,10 @@
 ## Demo 畫面
 <figcaption>資料庫操作</figcaption>
 
-<video src="img/demo.mp4" controls="controls"></video>
+
+
+https://user-images.githubusercontent.com/26845772/222964987-903bcfa2-df18-4baa-b4a7-8cdc303197a0.mp4
+
 
 <figcaption>iPhone直向</figcaption>
 <img decoding="async" src="img/iPhone%E7%9B%B4%E5%90%91.jpeg" width="50%">
