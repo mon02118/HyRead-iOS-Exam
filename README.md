@@ -54,6 +54,10 @@
 
 ---
 ## Demo 畫面
+<figcaption>資料庫操作</figcaption>
+
+<video src="img/demo.mp4" controls="controls"></video>
+
 <figcaption>iPhone直向</figcaption>
 <img decoding="async" src="img/iPhone%E7%9B%B4%E5%90%91.jpeg" width="50%">
 <figcaption>iPhone橫向</figcaption>
