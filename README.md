@@ -27,6 +27,8 @@
 - Utility：SqlManager/ImageHelper
 - Page：使用者書籍頁面相關
 
+- ../HyReadExam_SwiftTests
+    -   實作API unit test/ Model unit test
 
 
 ## 服務串接
